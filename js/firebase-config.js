@@ -4,13 +4,14 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
+    apiKey: "AIzaSyCV2fKizQPM6yHVhCu-i8XdL34StPcHK7c",
+    authDomain: "actechnician-6ab0b.firebaseapp.com",
+    projectId: "actechnician-6ab0b",
+    storageBucket: "actechnician-6ab0b.firebasestorage.app",
+    messagingSenderId: "872947613971",
+    appId: "1:872947613971:web:7ce7a30b373040eaf15ae6",
+    measurementId: "G-3ZH8JRSPZB"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
