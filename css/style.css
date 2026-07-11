@@ -1,0 +1,398 @@
+/* 
+  Maithil Thal - Luxury Mithila Design System
+  Colors: Deep Maroon, Mustard Gold, Terracotta, Ivory White, Light Cream, Dark Brown
+*/
+
+:root {
+    --primary-maroon: #800000;
+    --accent-gold: #D4AF37;
+    --mustard-gold: #A67C00;
+    --bg-ivory: #F9F6F0;
+    --text-body: #5C4033;
+    --text-heading: #1a1a1a;
+    --footer-dark: #1a1a1a;
+    --shadow-premium: 0 20px 40px rgba(128, 0, 0, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --transition-smooth: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-ivory);
+    color: var(--text-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .serif-text {
+    font-family: 'Outfit', serif;
+    color: var(--text-heading);
+    font-weight: 700;
+}
+
+/* Mithila Pattern Border Top */
+.mithila-top-border {
+    height: 16px;
+    background: var(--primary-maroon);
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(212, 175, 55, 0.4) 10px, rgba(212, 175, 55, 0.4) 20px);
+}
+
+/* Sidebar Decorative Rails */
+.decorative-rail {
+    width: 32px;
+    background: var(--primary-maroon);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+    color: var(--accent-gold);
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    position: fixed;
+    height: 100vh;
+    z-index: 10;
+}
+
+.decorative-rail.left { left: 0; }
+.decorative-rail.right { 
+    right: 0; 
+    background: var(--accent-gold);
+    color: var(--primary-maroon);
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+/* Layout Container */
+.main-wrapper {
+    margin: 0 32px;
+    min-height: 100vh;
+}
+
+/* Premium Card */
+.premium-card {
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.premium-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(128, 0, 0, 0.12);
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text {
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--primary-maroon);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.logo-subtext {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--mustard-gold);
+    margin-top: -4px;
+}
+
+/* Hero Section */
+.hero {
+    height: 85vh;
+    padding: 0 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    background: none;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    color: var(--primary-maroon);
+    font-style: italic;
+}
+
+.hero-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-circle {
+    width: 440px;
+    height: 440px;
+    border: 12px solid var(--primary-maroon);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(128, 0, 0, 0.3);
+}
+
+.hero-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Buttons */
+.btn {
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: var(--transition-smooth);
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary-maroon);
+    color: white;
+    box-shadow: 0 10px 20px rgba(128, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background: #600000;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--accent-gold);
+    color: var(--primary-maroon);
+}
+
+.btn-secondary:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+/* Dark Mode Adjustment */
+body.dark-mode {
+    --bg-ivory: #1a1a1a;
+    --text-body: #d1d1d1;
+    --text-heading: #ffffff;
+    --glass-bg: rgba(26, 26, 26, 0.9);
+    background-color: var(--bg-ivory);
+}
+
+body.dark-mode .premium-card {
+    background: #242424;
+    border-color: rgba(212, 175, 55, 0.1);
+}
+
+@media (max-width: 992px) {
+    .hero {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 80px 5%;
+        text-align: center;
+    }
+    .hero-circle {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Menu Grid */
+.menu-section {
+    padding: 100px 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--deep-maroon);
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    z-index: 1001;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.mobile-nav a {
+    color: var(--mustard-gold);
+    text-decoration: none;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 769px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+/* Footer */
+footer {
+    background: var(--dark-brown);
+    color: var(--ivory-white);
+    padding: 80px 5% 40px;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+.spin-slow {
+    animation: spin-slow 12s linear infinite;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-ivory);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease-out;
+}
+
+.loader-motif {
+    width: 80px;
+    height: 80px;
+    border: 4px solid var(--primary-maroon);
+    border-top-color: var(--accent-gold);
+    border-radius: 50%;
+    animation: spin-slow 1s linear infinite;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* AOS Styles refined */
+[data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+[data-aos="fade-up"] { transform: translateY(40px); }
+[data-aos="fade-right"] { transform: translateX(-40px); }
+[data-aos="fade-left"] { transform: translateX(40px); }
+[data-aos="zoom-in"] { transform: scale(0.9); }
+
+.aos-animate {
+    opacity: 1 !important;
+    transform: translate(0) scale(1) !important;
+}
+
+/* Theme Transition */
+body, header, .premium-card, footer {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+body.dark-mode {
+    --light-cream: #1A1A1A;
+    --ivory-white: #2D2D2D;
+    --dark-brown: #F5F5F5;
+    --glass-bg: rgba(26, 26, 26, 0.9);
+}
+
+body.dark-mode header {
+    border-bottom: 1px solid rgba(255, 219, 88, 0.2);
+}
+
+body.dark-mode nav ul li a {
+    color: #CCC;
+}
+
+body.dark-mode .premium-card {
+    background: #2D2D2D;
+    border-color: rgba(255, 219, 88, 0.1);
+}
+
+body.dark-mode .section-title p {
+    color: #AAA;
+}

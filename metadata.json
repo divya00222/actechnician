@@ -1,0 +1,6 @@
+{
+  "name": "Maithil Thal",
+  "description": "Luxury Authentic Maithili Restaurant in Janakpurdham. Experience traditional Mithila cuisine with premium modern UI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
